@@ -1,13 +1,14 @@
 <?php
 /**
  * Author: Gustavo Novaro
- * @version 1.0.3
+ * @version 1.0.4
  * Youtube2Mp3 Downloader page
  *
+ * Requisites
  * youtube-dl
  * https://rg3.github.io/youtube-dl/download.html
  *
- *
+ * ffmpeg
  */
 error_reporting(E_ALL);
 if(!empty($_POST['url']))
@@ -28,7 +29,7 @@ if(!empty($_POST['url']))
     //echo  $command_convert."<br />";
     $response = exec($command_convert);
     //var_dump($response);
-    if($response)
+    if(file_exists($file_name))
     {
         //Borro el archivo original el .m4a
         unlink($file_name);
@@ -38,6 +39,7 @@ if(!empty($_POST['url']))
 <!doctype html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>YouTube Downloader</title>
     <style>
     .container {
@@ -50,8 +52,8 @@ if(!empty($_POST['url']))
 <body>
     <div class="container">
         <form method="post">
-            <label>URL Youtube</label>
-            <input type="url" name="url" required="required">
+            <label>Youtube URL</label>
+            <input type="url" name="url" placeholder="https://www.youtube.com/watch?v=XXXXX" required="required">
             <button type="submit">Descargar</button>
         </form>
         <?php

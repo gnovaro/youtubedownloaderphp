@@ -4,6 +4,6 @@ Make your own YouTube Downloader Mp3 Site
 ## Requisites
 * Linux
 * php
-* apache web server
+* Web server
 * youtube-dl
 * ffmpeg

@@ -7,3 +7,9 @@ Make your own YouTube Downloader Mp3 Site
 * Web server
 * yt-dlp  (https://github.com/yt-dlp/yt-dlp)
 * ffmpeg (https://ffmpeg.org/)
+
+
+## Install ffmpeg in linux
+```bash
+sudo apt install ffmpeg
+```

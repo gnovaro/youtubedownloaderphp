@@ -14,11 +14,11 @@
 if(!empty($_POST['url']))
 {
     $url = trim($_POST['url']);
-    $command_filename = "./yt-dlp -f 140 --get-filename $url";
+    $command_filename = "yt-dlp -f 140 --get-filename $url";
 
     $file_name = exec(escapeshellcmd($command_filename));
 
-    $command = "./yt-dlp $url -f 140";
+    $command = "yt-dlp $url -f 140";
 
     $response = exec(escapeshellcmd($command));
 

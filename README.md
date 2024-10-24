@@ -37,6 +37,7 @@ php artisan migrate
 ```bash
 php artisan serve
 ```
+![Login](./docs/home_preview.png)
 
 ### Disable Auth in HomePage
 ![Login](./docs/login.png)

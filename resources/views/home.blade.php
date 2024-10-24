@@ -22,13 +22,13 @@
                             <input type="url" name="url" id="url" placeholder="https://www.youtube.com/watch?v=XXXXX"
                                    required="required" class="form-control">
 
-                            <button type="submit" class="btn btn-primary">Download</button>
+                            <button type="submit" class="btn btn-primary mt-2">
+                                <i class="bi bi-cloud-arrow-down-fill"></i> {{ __('Download') }}
+                            </button>
                         </form>
-                        <?php
-                        if(!empty($file_name_destination)) {
-                            echo '<a href="'.$file_name_destination.'" download>Download Mp3</a>';
-                        }
-                        ?>
+                        @if(!empty($file_name_destination))
+                            <a href="{{ $file_name_destination }}" download>Download Mp3</a>
+                        @endif
                     </main>
                 </div>
             </div>

@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function __construct()
     {
         // If you want to disable home auth just comment this line!
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**

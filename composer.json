@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "gnovaro/ydownloaderphp",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Y Dowloader PHP based on Laravel.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {

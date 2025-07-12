@@ -3,7 +3,7 @@ Make your own YouTube Downloader Mp3 Site
 
 ## Requisites
 * Linux
-* php
+* php >= 8.2 
 * Web server
 * Composer
 * yt-dlp  (https://github.com/yt-dlp/yt-dlp)

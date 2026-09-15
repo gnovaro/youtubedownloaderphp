@@ -1,3 +1,5 @@
+
+
 # YouTube Downloader PHP
 Make your own YouTube Downloader Mp3 Site
 
@@ -10,7 +12,7 @@ Make your own YouTube Downloader Mp3 Site
 * ffmpeg (https://ffmpeg.org/)
 
 
-## Install ffmpeg & yt-dlp in linux for Video and Audio convertions
+## Install ffmpeg & yt-dlp in linux for Video and Audio conversions
 ### Linux
 ```bash
 sudo apt install ffmpeg yt-dlp -y
@@ -45,4 +47,3 @@ Just comment this line __construct of HomeController.php
 ```php
 //$this->middleware('auth');
 ```
-

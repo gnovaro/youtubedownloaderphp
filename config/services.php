@@ -31,4 +31,13 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'ytdlp' => [
+        // Absolute path recommended in production: the web server user may have a different PATH.
+        'binary' => env('YTDLP_BINARY', 'yt-dlp'),
+        // Optional path to ffmpeg (binary or directory); empty uses ffmpeg from PATH.
+        'ffmpeg_location' => env('FFMPEG_LOCATION'),
+        'format' => env('YTDLP_FORMAT', 'bestaudio[ext=m4a]/bestaudio'),
+        'timeout' => (int) env('YTDLP_TIMEOUT', 300),
+    ],
+
 ];

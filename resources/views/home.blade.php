@@ -26,8 +26,16 @@
                                 <i class="bi bi-cloud-arrow-down-fill"></i> {{ __('Download') }}
                             </button>
                         </form>
+                        @error('url')
+                            <div class="alert alert-danger mt-3" role="alert">{{ $message }}</div>
+                        @enderror
+                        @if(!empty($error))
+                            <div class="alert alert-danger mt-3" role="alert">
+                                {{ __('The audio could not be downloaded. Please check the URL and try again.') }}
+                            </div>
+                        @endif
                         @if(!empty($file_name_destination))
-                            <a href="{{ $file_name_destination }}" download>Download Mp3</a>
+                            <a href="{{ asset($file_name_destination) }}" class="d-inline-block mt-3" download>Download Mp3</a>
                         @endif
                     </main>
                 </div>

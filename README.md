@@ -81,6 +81,16 @@ php artisan key:generate   # only on a fresh install: it replaces an existing AP
 php artisan migrate
 ```
 
+### yt-dlp settings
+Optional `.env` variables (see `config/services.php`):
+
+| Variable | Default | Description |
+|---|---|---|
+| `YTDLP_BINARY` | `yt-dlp` | Path to yt-dlp. Use an absolute path (`/usr/local/bin/yt-dlp`) when served by a web server, whose user may have a different `PATH` |
+| `FFMPEG_LOCATION` | _(PATH)_ | Path to ffmpeg, if it is not in `PATH` |
+| `YTDLP_FORMAT` | `bestaudio[ext=m4a]/bestaudio` | Audio format to download before converting to MP3 |
+| `YTDLP_TIMEOUT` | `300` | Maximum seconds for a download |
+
 ### Permissions for the web server
 When the site is served by a web server (e.g. `www-data`) instead of `php artisan serve`, it needs
 write access to `storage`, `bootstrap/cache`, the SQLite file **and its directory** (SQLite creates

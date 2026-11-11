@@ -38,12 +38,9 @@ return [
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
-            // Relative paths (e.g. "database/ydownload.sqlite") are resolved from the project root.
-            'database' => (static function (string $path): string {
-                return $path === ':memory:' || preg_match('#^([a-zA-Z]:)?[\\\\/]#', $path)
-                    ? $path
-                    : base_path($path);
-            })(env('DB_DATABASE', 'database/ydownload.sqlite')),
+            // Relative paths (e.g. "database/ydownload.sqlite") are resolved from the
+            // project root by Laravel's SQLiteConnector; in-memory URIs pass through.
+            'database' => env('DB_DATABASE', database_path('ydownload.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
